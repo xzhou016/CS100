@@ -1,3 +1,5 @@
+class Container;
+
 class Sort{
   public:
   /* Constructors */
