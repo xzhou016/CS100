@@ -1,4 +1,4 @@
-classContainer{
+class Container : Base {
   protected:
     Sort* sort_function;
   public:

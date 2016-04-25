@@ -1,7 +1,7 @@
-classBase{
+class Base{
   public:
     /* Constructors */
     Base() { };
     /* PureVirtualFunctions */
-    virtualdoubleevaluate() = 0;
+    virtual double evaluate() = 0;
 };

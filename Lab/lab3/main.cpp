@@ -1,7 +1,8 @@
-#include "header.h"
+#include <iostream>
+#include <vector>
 //#includenecessaryclasses
 
-using namespace std;
+
 int main(){
   Op* op7 = new Op(7);
   Op* op4 = new Op(4);
