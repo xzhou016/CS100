@@ -4,9 +4,6 @@ class Op: Base {
 
 public:
   Op(double value){
-    this->value = value;
   }
-  Op(){
 
-  }
 }
