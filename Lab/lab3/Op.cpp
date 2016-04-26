@@ -1,9 +1,13 @@
 
 class Op: Base {
-  double value
+  double value;
 
 public:
-  Op(double value){
+  Op(double v){
+    value = v;
+  }
+  double evaluate() {
+    return value;
   }
 
-}
+};
