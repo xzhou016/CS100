@@ -6,4 +6,4 @@ using namespace std;
 #include "Sort.cpp"
 #include "Container.cpp"
 #include "Op.cpp"
-#include "Composite.h"
+#include "Composite.cpp"

@@ -5,7 +5,7 @@ class Mult:Base {
   Base* leftChild;
   Base* rightChild;
 public:
-  double evaluate(){
+  virtual double evaluate(){
     return leftChild->evaluate() * rightChild->evaluate();
   }
 
@@ -15,7 +15,7 @@ class Div:Base{
   Base* leftChild;
   Base* rightChild;
 public:
-  double evaluate(){
+  virtual double evaluate(){
     return leftChild->evaluate() / rightChild->evaluate();
   }
 };
@@ -24,7 +24,7 @@ class Add:Base{
   Base* leftChild;
   Base* rightChild;
 public:
-  double evaluate(){
+  virtual double evaluate(){
     return leftChild->evaluate() + rightChild->evaluate();
   }
 };
@@ -33,7 +33,7 @@ class Sub:Base{
   Base* leftChild;
   Base* rightChild;
 public:
-  double evaluate(){
+  virtual double evaluate(){
     return leftChild->evaluate() - rightChild->evaluate();
   }
 };
@@ -41,7 +41,7 @@ public:
 class Sqr:Base{
   Base* child;
 public:
-  double evaluate(){
+  virtual double evaluate(){
     return child->evaluate() * child->evaluate();
   }
 };
