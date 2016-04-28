@@ -1,7 +1,7 @@
 
 
 
-class Mult:Base {
+class Mult: Public Base {
   Base* leftChild;
   Base* rightChild;
 public:
@@ -11,7 +11,7 @@ public:
 
 };
 
-class Div:Base{
+class Div: Public Base{
   Base* leftChild;
   Base* rightChild;
 public:
@@ -20,7 +20,7 @@ public:
   }
 };
 
-class Add:Base{
+class Add: Public Base{
   Base* leftChild;
   Base* rightChild;
 public:
@@ -29,7 +29,7 @@ public:
   }
 };
 
-class Sub:Base{
+class Sub: Public Base{
   Base* leftChild;
   Base* rightChild;
 public:
@@ -38,7 +38,7 @@ public:
   }
 };
 
-class Sqr:Base{
+class Sqr: Public Base{
   Base* child;
 public:
   virtual double evaluate(){
