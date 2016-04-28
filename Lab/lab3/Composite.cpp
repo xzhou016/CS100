@@ -1,7 +1,7 @@
 
 
 
-class Mult: Public Base {
+class Mult: public Base {
   Base* leftChild;
   Base* rightChild;
 public:
@@ -14,7 +14,7 @@ public:
 
 };
 
-class Div: Public Base{
+class Div: public Base{
   Base* leftChild;
   Base* rightChild;
 public:
@@ -26,7 +26,7 @@ public:
   }
 };
 
-class Add: Public Base{
+class Add: public Base{
   Base* leftChild;
   Base* rightChild;
 public:
@@ -38,7 +38,7 @@ public:
   }
 };
 
-class Sub: Public Base{
+class Sub: public Base{
   Base* leftChild;
   Base* rightChild;
 public:
@@ -50,7 +50,7 @@ public:
   }
 };
 
-class Sqr: Public Base{
+class Sqr: public Base{
   Base* child;
 public:
   Spr(Base* childptr)

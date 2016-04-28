@@ -1,5 +1,5 @@
 
-class Op: Base {
+class Op: public Base {
   double value;
 
 public:
