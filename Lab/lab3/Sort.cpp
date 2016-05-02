@@ -17,6 +17,11 @@ class SelectionSort : public Sort
 
 };
 
+void SelectionSort::sort(Container* container)
+{
+  
+}
+
 
 class BubbleSort : public Sort
 {
