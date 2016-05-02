@@ -1,11 +1,13 @@
+
 class Sort;
+
 
 class Container : Base {
   protected:
     Sort* sort_function;
   public:
     /*Constructors*/
-    Container() : sort_function(NULL){};
+    Container() : sort_function(){};
     Container(Sort* function) : sort_function(function){};
 
     /* Non Virtual Functions */
@@ -25,4 +27,28 @@ class Container : Base {
     virtual Base* at(int i)=0;
     //return container size
     virtual int size()=0;
+};
+
+class VectorContainer : Container
+{
+  public:
+  Sort* sort_function();
+  void add_element( Base* element);
+  void print();
+  void sort();
+  void swap(int i, int j);
+  Base* at(int i);
+  int size();
+};
+
+class ListContainer : Container
+{
+  public: 
+  Sort* sort_function();
+  void add_element( Base* element);
+  void print();
+  void sort();
+  void swap(int i, int j);
+  Base* at(int i);
+  int size();
 };
