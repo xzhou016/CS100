@@ -45,8 +45,8 @@ class VectorContainer : public Container
   };
   
   void print() {
-    for(auto i : myBox){
-      cout << i->evaluate() << " ";
+    for(int i = 0; i < myBox.size() ; i++){
+      cout << myBox[i]->evaluate() << " ";
     }
     cout << endl;
   };
@@ -58,13 +58,13 @@ class VectorContainer : public Container
     }catch(string e){
       cout << "Sort function was " << e << endl;
     }
-    sort_function->sort(this);
+    //sort_function->sort(this);
   };
   
   void swap(int i, int j) {
     Base* temp;
     temp = myBox[i];
-    myBox[i] = move(myBox[j]);
+    myBox[i] = myBox[j];
     myBox[j] = temp;
   };
   
