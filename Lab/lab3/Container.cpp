@@ -1,7 +1,6 @@
-#include "Base.cpp"
 class Sort;
 
-class Container : Base {
+class Container{
   protected:
     Sort* sort_function;
   public:
@@ -10,13 +9,15 @@ class Container : Base {
     Container(Sort* function) : sort_function(function){};
 
     /* Non Virtual Functions */
-    void set_sort_function(Sort*sort_function);//set the type of sorting algorithm
+    void set_sort_function(Sort* sort_function){
+      this->sort_function;
+    };//set the type of sorting algorithm
     /* Pure Virtual Functions */
     //push the top pointer of the tree into container
     virtual void add_element( Base* element) = 0;
     //iterate through trees and output values
     virtual void print() = 0;
-    //calls on the previously set sorting ­algorithm.
+    //calls on the previously set sorting algorithm.
     //Checks if sort_function is not null,throw exception if otherwise
     virtual void sort() = 0;
     /*Essentially the only functionsneededtosort*/
@@ -26,4 +27,55 @@ class Container : Base {
     virtual Base* at(int i)=0;
     //return container size
     virtual int size()=0;
+};
+
+class VectorContainer : public Container
+{
+  private: 
+  vector<Base*> myBox;
+  
+  public:
+  VectorContainer() {};
+  ~VectorContainer() {};
+  
+  
+  Sort* sort_function();
+  virtual void add_element( Base* element){
+    myBox.push_back(element);
+  };
+  
+  void print() {
+    for(auto i : myBox){
+      cout << i->evaluate() << " ";
+    }
+    cout << endl;
+  };
+  
+  void sort() {
+    try{
+      if(sort_function() == NULL)
+        throw "NULL";
+    }catch(string e){
+      cout << "Sort function was " << e << endl;
+    }
+    
+    
+    
+    
+  };
+  
+  void swap(int i, int j) {
+    Base* temp;
+    temp = myBox[i];
+    myBox[i] = move(myBox[j]);
+    myBox[j] = temp;
+  };
+  
+  Base* at(int i) {
+    return myBox[i];
+  };
+  
+  int size() {
+    return myBox.size();
+  };
 };
