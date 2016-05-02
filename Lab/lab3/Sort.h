@@ -1,9 +1,8 @@
 class Container;
-
 class Sort{
   public:
   /* Constructors */
-  Sort();
+  Sort(){};
   /* Pure Virtual Functions */
   virtual void sort( Container* container) = 0;
 };
@@ -11,7 +10,7 @@ class Sort{
 class SelectionSort : public Sort
 {
   public:
-  SelectionSort();
+  SelectionSort() {};
   
   void sort(Container* container) {
     int i, j, min;
@@ -25,7 +24,7 @@ class SelectionSort : public Sort
       }
       
       if(container->at(i) != container->at(min))
-        swap(i, min);
+        container->swap(i, min);
     }
   };
 

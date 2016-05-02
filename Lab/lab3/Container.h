@@ -9,8 +9,8 @@ class Container{
     Container(Sort* function) : sort_function(function){};
 
     /* Non Virtual Functions */
-    void set_sort_function(Sort* sort_function){
-      this->sort_function;
+    void set_sort_function(Sort* sf){
+      sort_function = sf;
     };//set the type of sorting algorithm
     /* Pure Virtual Functions */
     //push the top pointer of the tree into container
@@ -39,7 +39,7 @@ class VectorContainer : public Container
   ~VectorContainer() {};
   
   
-  Sort* sort_function();
+  //Sort* sort_function();
   virtual void add_element( Base* element){
     myBox.push_back(element);
   };
@@ -53,15 +53,12 @@ class VectorContainer : public Container
   
   void sort() {
     try{
-      if(sort_function() == NULL)
+      if(sort_function == NULL)
         throw "NULL";
     }catch(string e){
       cout << "Sort function was " << e << endl;
     }
-    
-    
-    
-    
+    sort_function->sort(this);
   };
   
   void swap(int i, int j) {
