@@ -7,3 +7,4 @@ using namespace std;
 #include "Composite.h"
 #include "Container.h"
 #include "Sort.h"
+#include "Decorator.h"
