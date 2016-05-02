@@ -53,7 +53,7 @@ public:
 class Sqr: public Base{
   Base* child;
 public:
-  Spr(Base* childptr)
+  Sqr(Base* childptr)
   : child(childptr)
   { };
   virtual double evaluate(){
