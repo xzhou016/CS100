@@ -1,8 +1,7 @@
-
 class Sort;
 
 
-class Container : Base {
+class Container{
   protected:
     Sort* sort_function;
   public:
@@ -29,26 +28,35 @@ class Container : Base {
     virtual int size()=0;
 };
 
-class VectorContainer : Container
+class VectorContainer : public Container
 {
+  
   public:
-  Sort* sort_function();
-  void add_element( Base* element);
-  void print();
+  VectorContainer();
+  ~VectorContainer();
+  void add_element( Base* element) {vec.push_back(element);};
+  void print()
+  {
+    for(int i = 0; i < vec.size(); i++)
+    {
+      cout << vec.at(i)->evaluate();
+    }
+    cout << endl;
+  }
   void sort();
-  void swap(int i, int j);
-  Base* at(int i);
-  int size();
+  void swap(int i, int j){
+    Base* temp = vec.at(i);
+    vec.at(i) = vec.at(j);
+    vec.at(j) = temp;
+    
+  };
+  Base* at(int i) {return vec.at(i);};
+  int size() {return vec.size();};
+  
+  private:
+  vector<Base*> vec;
 };
 
-class ListContainer : Container
-{
-  public: 
-  Sort* sort_function();
-  void add_element( Base* element);
-  void print();
-  void sort();
-  void swap(int i, int j);
-  Base* at(int i);
-  int size();
-};
+
+
+

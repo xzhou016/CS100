@@ -12,17 +12,17 @@ int main(){
   Sub* C = new Sub(B, op2);
   Sqr* D = new Sqr(C);
 
-  //VectorContainer* container = new VectorContainer();
-  // container­->add_element(A);
-  // container­->add_element(B);
-  // container­->add_element(C);
-  // container­->add_element(D);
+  VectorContainer* container = new VectorContainer();
+  // container->add_element(A);
+  // container->add_element(B);
+  // container->add_element(C);
+  // container->add_element(D);
   // cout << "Container Before Sort : " << endl;
-  // container­->print();
-  //
+  // container->print();
+  
   // cout << "Container After Sort : " << endl;
-  // container-­>set_sort_function(new SelectionSort());
-  // container­->sort();
-  // container­->print();
+  // container->set_sort_function(new SelectionSort());
+  // container->sort();
+  // container->print();
   return 0;
 }
