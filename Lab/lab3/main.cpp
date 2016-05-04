@@ -30,11 +30,11 @@ int main(){
   container->add_element(D);
   cout << "Container Before Sort : " << endl;
   container->print();
-  cout << "Container After Sort : " << endl;
-  container->set_sort_function(new SelectionSort());
+  //cout << "Container After Sort : " << endl;
+  //container->set_sort_function(new SelectionSort());
   //container->set_sort_function(new BubbleSort());
-  container->sort();
-  container->print();
+  //container->sort();
+  //container->print();
 
 
 
