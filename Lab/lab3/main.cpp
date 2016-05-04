@@ -32,7 +32,7 @@ int main(){
   container->print();
   cout << "Container After Sort : " << endl;
   container->set_sort_function(new SelectionSort());
-  container->set_sort_function(new BubbleSort());
+  //container->set_sort_function(new BubbleSort());
   container->sort();
   container->print();
 
