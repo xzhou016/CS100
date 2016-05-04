@@ -1,4 +1,5 @@
 class Container;
+
 class Sort{
   public:
   /* Constructors */
@@ -26,7 +27,7 @@ class SelectionSort : public Sort
       if(container->at(i) != container->at(min))
         container->swap(i, min);
     }
-  };
+  }
 
 };
 

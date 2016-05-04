@@ -35,12 +35,13 @@ class VectorContainer : public Container
   vector<Base*> myBox;
   
   public:
+  //VectorContainer(Sort* function):sort_function(function) {};
   VectorContainer() {};
   ~VectorContainer() {};
   
   
   //Sort* sort_function();
-  virtual void add_element( Base* element){
+  void add_element( Base* element){
     myBox.push_back(element);
   };
   
@@ -58,7 +59,7 @@ class VectorContainer : public Container
     }catch(string e){
       cout << "Sort function was " << e << endl;
     }
-    //sort_function->sort(this);
+    test->sort(this);
   };
   
   void swap(int i, int j) {
