@@ -1,3 +1,7 @@
+#ifndef CONTAINER_H
+#define CONTAINER_H
+
+//#include "Sort.h"
 class Sort;
 
 class Container{
@@ -29,51 +33,21 @@ class Container{
     virtual int size()=0;
 };
 
-class VectorContainer : public Container
-{
-  private: 
+class VectorContainer : public Container{
+  private:
   vector<Base*> myBox;
-  
+
   public:
   //VectorContainer(Sort* function):sort_function(function) {};
-  VectorContainer() {};
-  ~VectorContainer() {};
-  
-  
+  VectorContainer(){};
+  ~VectorContainer(){};
   //Sort* sort_function();
-  void add_element( Base* element){
-    myBox.push_back(element);
-  };
-  
-  void print() {
-    for(int i = 0; i < myBox.size() ; i++){
-      cout << myBox[i]->evaluate() << " ";
-    }
-    cout << endl;
-  };
-  
-  void sort() {
-    try{
-      if(sort_function == NULL)
-        throw "NULL";
-    }catch(string e){
-      cout << "Sort function was " << e << endl;
-    }
-    test->sort(this);
-  };
-  
-  void swap(int i, int j) {
-    Base* temp;
-    temp = myBox[i];
-    myBox[i] = myBox[j];
-    myBox[j] = temp;
-  };
-  
-  Base* at(int i) {
-    return myBox[i];
-  };
-  
-  int size() {
-    return myBox.size();
-  };
+  void add_element( Base* element);
+  void print();
+  void sort();
+  void swap(int i, int j);
+  Base* at(int i);
+  int size();
 };
+
+#endif

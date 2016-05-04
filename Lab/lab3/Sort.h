@@ -1,4 +1,8 @@
-class Container;
+#ifndef SORT_H
+#define SORT_H
+
+#include "Container.h"
+//class Container;
 
 class Sort{
   public:
@@ -12,22 +16,8 @@ class SelectionSort : public Sort
 {
   public:
   SelectionSort() {};
-  
-  void sort(Container* container) {
-    int i, j, min;
-    double temp; 
-    for (int i= 0; i < (container->size()); i++){
-      min = i;
-      
-      for(int j = i + 1; j < container->size(); j++){
-        if(container->at(i) < container->at(min))
-          min = j;
-      }
-      
-      if(container->at(i) != container->at(min))
-        container->swap(i, min);
-    }
-  }
+
+  void sort(Container* container);
 
 };
 
@@ -35,7 +25,9 @@ class SelectionSort : public Sort
 class BubbleSort : public Sort
 {
   public:
-  BubbleSort();
-  
+  BubbleSort(){};
+
   void sort(Container* container);
 };
+
+#endif

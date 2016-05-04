@@ -1,4 +1,15 @@
-#include "header.h"
+#include <iostream>
+#include <vector>
+
+using namespace std;
+#include "Base.h"
+#include "Op.h"
+#include "Composite.h"
+#include "Container.h"
+#include "Container.cpp"
+#include "Sort.h"
+#include "Sort.cpp"
+#include "Decorator.h"
 //#includenecessaryclasses
 
 
@@ -19,11 +30,18 @@ int main(){
   container->add_element(D);
   cout << "Container Before Sort : " << endl;
   container->print();
-  
+  cout << "Container After Sort : " << endl;
+  container->set_sort_function(new SelectionSort());
+  container->set_sort_function(new BubbleSort());
+  container->sort();
+  container->print();
+
+
+
   //double test = 7/9
   Div* E = new Div(A, B);
   cout << "A / B  = " << E->evaluate() << endl;
-  
+
   Ceil* myCeiling = new Ceil(E);
   Floor* myFloor = new Floor(E);
   Op* negOne = new Op(-1);
@@ -31,12 +49,5 @@ int main(){
   cout << myCeiling->evaluate() << endl;
   cout << myFloor->evaluate() << endl;
   cout << myAbs->evaluate() << endl;
-  
-  
-  //
-  // cout << "Container After Sort : " << endl;
-  //container->set_sort_function(new SelectionSort());
-  // container->sort();
-  // container->print();
   return 0;
 }
