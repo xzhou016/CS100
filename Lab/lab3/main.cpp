@@ -30,24 +30,24 @@ int main(){
   container->add_element(D);
   cout << "Container Before Sort : " << endl;
   container->print();
-  //cout << "Container After Sort : " << endl;
-  //container->set_sort_function(new SelectionSort());
+  cout << "Container After Sort : " << endl;
+  container->set_sort_function(new SelectionSort());
   //container->set_sort_function(new BubbleSort());
-  //container->sort();
-  //container->print();
+  container->sort();
+  container->print();
 
 
 
-  //double test = 7/9
-  Div* E = new Div(A, B);
-  cout << "A / B  = " << E->evaluate() << endl;
-
-  Ceil* myCeiling = new Ceil(E);
-  Floor* myFloor = new Floor(E);
-  Op* negOne = new Op(-1);
-  Abs* myAbs = new Abs(negOne);
-  cout << myCeiling->evaluate() << endl;
-  cout << myFloor->evaluate() << endl;
-  cout << myAbs->evaluate() << endl;
+  // //double test = 7/9
+  // Div* E = new Div(A, B);
+  // cout << "A / B  = " << E->evaluate() << endl;
+  //
+  // Ceil* myCeiling = new Ceil(E);
+  // Floor* myFloor = new Floor(E);
+  // Op* negOne = new Op(-1);
+  // Abs* myAbs = new Abs(negOne);
+  // cout << myCeiling->evaluate() << endl;
+  // cout << myFloor->evaluate() << endl;
+  // cout << myAbs->evaluate() << endl;
   return 0;
 }

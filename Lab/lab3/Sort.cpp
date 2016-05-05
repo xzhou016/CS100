@@ -27,7 +27,7 @@ void BubbleSort::sort(Container* container){
     while(did_swap == true){
       did_swap = false;
       for(int i = 1; i < container->size(); i++){
-        if(container->at(i)->evaluate() < container->at(i-1)->evaluate){
+        if(container->at(i)->evaluate() < container->at(i-1)->evaluate()){
           container->swap(i, i-1);
           did_swap = true;
         }
