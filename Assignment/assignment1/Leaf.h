@@ -25,7 +25,7 @@ class NotBin : public Executable
 
 };
 
-class Comment : public Execute
+class Comment : public Executable
 {
 		private:
         string command;
