@@ -7,3 +7,4 @@ using namespace std;
 #include "BaseCommand.cpp"
 #include "Composite.h"
 #include "Composite.cpp"
+#include "Leaf.h"
