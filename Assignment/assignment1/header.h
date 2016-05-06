@@ -2,8 +2,8 @@
 #include <string>
 #include <vector>
 #include <fstream>
+using namespace std;
+#include "BaseCommand.h"
+#include "BaseCommand.cpp"
 
-int main(int argc, char const *argv[]) {
-  /* code */
-  return 0;
-}
+
