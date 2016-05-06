@@ -6,4 +6,4 @@ using namespace std;
 #include "BaseCommand.h"
 #include "BaseCommand.cpp"
 #include "Composite.h"
-
+#include "Composite.cpp"
