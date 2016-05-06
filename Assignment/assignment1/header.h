@@ -8,3 +8,4 @@ using namespace std;
 #include "Composite.h"
 #include "Composite.cpp"
 #include "Leaf.h"
+#include "Leaf.cpp"
