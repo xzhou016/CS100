@@ -16,12 +16,12 @@ void Executable::run(string command, string token)
 
 
 
-VarComposite::VarComposite
+VarComposite::VarComposite()
 {
 		PID = 1;
 }
 
-VarComposite::~Varcomposite()
+VarComposite::~VarComposite()
 {
 		delete this;
 }
@@ -36,7 +36,7 @@ void VarComposite::ANDhandler(string command)
 
 }
 
-void VarComposite::ORhandler(string command);
+void VarComposite::ORhandler(string command)
 {
 
 }
