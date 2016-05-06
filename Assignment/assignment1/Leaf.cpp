@@ -23,8 +23,7 @@ NotBin::NotBin()
 
 NotBin::~NotBin()
 {
-		delete this
-				
+		delete this;
 }
 
 void NotBin::run(string command, string token)
