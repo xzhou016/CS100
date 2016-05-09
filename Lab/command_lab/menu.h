@@ -13,11 +13,11 @@ class Menu {
 
 	public:
 		Menu() {
-			//Base constructor to set up all necessary members
+			this->history_index = 0;//Base constructor to set up all necessary members
 		};
 		void execute() {
-			if (history.size() != 0) {
-				cout << history.at(history_index)->execute() << endl;//Prints the current commands value (based on history_index), if no commands exist
+			if (this->history_index != 0) {
+				cout << history.at(this->history_index - 1)->execute() << endl;//Prints the current commands value (based on history_index), if no commands exist
 			}else
 				cout << 0 << endl;//print 0 by default
 		};
