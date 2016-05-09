@@ -63,7 +63,7 @@ class SqrCommand : public Command {
 	//SqrCommand Code Here
 	
 		public:
-        SqrCommand(Command* CmdPtr, double number)
+        SqrCommand(Command* CmdPtr)
 		{
 				root = new Sqr(CmdPtr->get_root());
 		};
