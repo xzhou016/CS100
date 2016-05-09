@@ -5,7 +5,6 @@ void SelectionSort::sort(Container* container){
   double temp;
   for (int i= 0; i < (container->size()); i++){
     min = i;
-
     for(int j = i + 1; j < container->size(); j++){
       if(container->at(i)->evaluate() > container->at(j)->evaluate())
       {//cout << "changin min" << endl;
@@ -22,8 +21,6 @@ void SelectionSort::sort(Container* container){
 
 void BubbleSort::sort(Container* container){
     bool did_swap = true;
-
-
     while(did_swap == true){
       did_swap = false;
       for(int i = 1; i < container->size(); i++){
@@ -32,6 +29,5 @@ void BubbleSort::sort(Container* container){
           did_swap = true;
         }
       }
-
     }
 }

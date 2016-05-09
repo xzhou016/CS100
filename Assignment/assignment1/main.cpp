@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <iostream>
 
 int main(int argc, char const *argv[]) {
@@ -6,3 +7,12 @@ int main(int argc, char const *argv[]) {
   cin >> input;
   return 0;
 }
+=======
+#include "header.h"
+
+
+int main(int argc, char const *argv[]) {
+  /* code */
+  return 0;
+}
+>>>>>>> master
