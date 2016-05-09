@@ -1,6 +1,3 @@
-
-
-
 class Mult: public Base {
   Base* leftChild;
   Base* rightChild;

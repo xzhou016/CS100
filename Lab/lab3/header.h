@@ -3,7 +3,8 @@
 
 using namespace std;
 #include "Base.h"
-#include "Container.cpp"
-#include "Sort.cpp"
-#include "Op.cpp"
-#include "Composite.cpp"
+#include "Op.h"
+#include "Composite.h"
+#include "Container.h"
+#include "Sort.h"
+#include "Decorator.h"

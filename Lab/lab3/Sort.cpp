@@ -1,67 +1,33 @@
+#include "Sort.h"
 
-
-class Sort{
-  public:
-  /* Constructors */
-  Sort();
-  /* Pure Virtual Functions */
-  virtual void sort( Container* container) = 0;
-};
-
-class SelectionSort : public Sort
-{
-  public:
-  SelectionSort();
-  
-  void sort(Container* container)
-  {
-    Base* lowest = container->at(0);
-    int lowest_index = 0;
-    for(int i = 0; i < container->size(); i++)
-    {
-      lowest = container->at(i);
-      lowest_index = i;
-      for(int j = i+1; i < container->size()-1; j++)
-      {
-        if(container->at(j)->evaluate() < lowest->evaluate())
-        {
-            lowest = container->at(j);
-            lowest_index = j;
-        }
+void SelectionSort::sort(Container* container){
+  int i, j, min;
+  double temp;
+  for (int i= 0; i < (container->size()); i++){
+    min = i;
+    for(int j = i + 1; j < container->size(); j++){
+      if(container->at(i)->evaluate() > container->at(j)->evaluate())
+      {//cout << "changin min" << endl;
+        min = j;
       }
-      
-      container->swap(i, lowest_index);
-      
+    }
+    //cout << "I: " << i << "min " << min << endl;
+    if(container->at(i)->evaluate() > container->at(min)->evaluate()){
+      //cout << "swapping \n";
+      container->swap(i, min);
     }
   }
+}
 
-};
-
-
-
-
-class BubbleSort : public Sort
-{
-  public:
-  BubbleSort();
-  
-  void sort(Container* container)
-  {
-      bool did_swap = true;
-      
-      
-    while(did_swap == true)
-    {
+void BubbleSort::sort(Container* container){
+    bool did_swap = true;
+    while(did_swap == true){
       did_swap = false;
-      for(int i = 1; i < container->size(); i++)
-      {
-        if(container->at(i) < container->at(i-1))
-        {
+      for(int i = 1; i < container->size(); i++){
+        if(container->at(i)->evaluate() < container->at(i-1)->evaluate()){
           container->swap(i, i-1);
           did_swap = true;
         }
       }
-      
     }
-  }
-};
+}
