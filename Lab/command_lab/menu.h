@@ -41,7 +41,7 @@ class Menu {
 			}
 		};
 		void redo() {
-			if(history_index != (history_index.size() - 1)){
+			if(history_index != (history.size() - 1)){
 				history_index++;
 				return; //Moves to the next command in history (if possible)
 			}
