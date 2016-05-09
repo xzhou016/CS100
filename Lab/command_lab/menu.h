@@ -16,7 +16,7 @@ class Menu {
 			this->history_index = 0;//Base constructor to set up all necessary members
 		};
 		void execute() {
-			if (this->history_index != 0) {
+			if (history_index > 0) {
 				cout << history.at(this->history_index - 1)->execute() << endl;//Prints the current commands value (based on history_index), if no commands exist
 			}else
 				cout << 0 << endl;//print 0 by default
@@ -30,9 +30,10 @@ class Menu {
 		};
 		void add_command(Command* cmd) {
 			history.push_back(cmd);//Adds a command to history in the appropriate posiiton (based on history_index)
+			history_index++;
 		};
 		Command* get_command() {
-			return history.at(history_index);//Returns the command in history we are currently referring to (based on history_index)
+			return history.at(history_index - 1);//Returns the command in history we are currently referring to (based on history_index)
 		};
 		void undo() {
 			if(history_index != 0){
@@ -41,8 +42,9 @@ class Menu {
 			}
 		};
 		void redo() {
-			if(history_index != (history.size() - 1)){
+			if(history_index < history.size()){
 				history_index++;
+				//history_index++;
 				return; //Moves to the next command in history (if possible)
 			}
 		};
