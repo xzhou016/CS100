@@ -9,5 +9,11 @@ public:
   double evaluate() {
     return value;
   }
-
+  
+  void set_L_Null() {};
+  void set_R_Null() {};
+  Base* get_left() {return NULL;};
+  Base* get_right() {return NULL;};
+  void print() { cout << value ;};
+  Iterator* create_iterator() {return new NullIterator(this);};
 };

@@ -6,5 +6,6 @@ using namespace std;
 #include "Op.h"
 #include "Composite.h"
 #include "Container.h"
+#include "Container.cpp"
 #include "Sort.h"
 #include "Decorator.h"
