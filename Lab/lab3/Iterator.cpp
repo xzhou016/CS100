@@ -115,7 +115,34 @@ void PreOrderIterator::first()
 
 void PreOrderIterator::next()
 {
-	
+		
+	Iterator* itr = this->iterators.top()->current()->create_iterator();
+
+	itr->first();
+	this->iterators.push(itr);
+
+	while(this->iterators.size() > 0 && this->iterators.top()->is_done())
+	{
+			this->iterators.pop();
+			if(!this->iterators.empty())
+			{
+				this->iterators.top()->next();
+			}
+	}
+
+
+//	if(iterators.top()->current()->get_left() != NULL)
+//	{
+//			iterators.push(iterators.top()->current()->get_left()->create_iterator());
+//			return;
+//	}
+//	
+
+//	if(iterators.top()->current()->get_right() != NULL)
+///	{
+//			iterators.push(iterators.top()->current()->get_right()->create_iterator());
+//			return;
+//	}
 
 }
 
