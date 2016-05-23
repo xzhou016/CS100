@@ -11,6 +11,7 @@ using namespace std;
 #include "Iterator.cpp"
 #include "Composite.h"
 #include "Op.h"
+#include "Visitor.h"
 //#includenecessaryclasses
 
 
@@ -24,7 +25,7 @@ int main(){
   //Sub* C = new Sub(B, op2);
   //Sqr* D = new Sqr(C);
 	Op* op1 = new Op(1);
-	Sqr* sq1 = new Sqr(op1);	
+	Sqr* sq1 = new Sqr(op1);
 	Op* op4 = new Op(4);
 	Op* op2 = new Op(2);
 	Mult* mult8 = new Mult(op4, op2);
@@ -62,18 +63,33 @@ int main(){
   // cout << myCeiling->evaluate() << endl;
   // cout << myFloor->evaluate() << endl;
   // cout << myAbs->evaluate() << endl;
-  
+
 	cout <<  "--- PreOrder Iterator ---" << endl;
 	PreOrderIterator* pre_itr = new PreOrderIterator(root);
 
-	
+
 	int limit = 0;
 
 
 	for(pre_itr->first(); !pre_itr->is_done(); pre_itr->next())
 	{
 		if(pre_itr->current() != NULL)
-		{	
+		{
+			pre_itr->current()->print();
+			cout << endl;
+			limit++;
+		}
+		if(limit == 10)
+		{
+				return 0;
+		}
+	}
+
+	//lab 8
+	for(pre_itr->first(); !pre_itr->is_done(); pre_itr->next())
+	{
+		if(pre_itr->current() != NULL)
+		{
 			pre_itr->current()->print();
 			cout << endl;
 			limit++;
